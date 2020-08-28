@@ -1,0 +1,87 @@
+.authPage {
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to bottom, var(--coral), var(--yellow));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    color: var(--white);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 2.5rem;
+}
+.logo svg {
+    font-size: 130px;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+.logo h2 {
+    font-family: 'Pacifico', cursive;
+    font-size: 2.5rem;
+    text-align: center;
+    line-height: 3.5rem;
+    margin: 0 1rem;
+}
+
+
+.authPage input {
+    background-color: var(--white);
+    color: var(--gray);
+    
+    border: 1px solid transparent;
+    border-radius: 5px;
+    width: 80%;
+    max-width: 700px;
+
+    padding: 1rem;
+    font-size: 1rem;
+
+    margin-bottom: 1.5rem;
+}
+.authPage input.invalidInput {
+    border-color: var(--coral);
+}
+
+
+.connectButton {
+    background-color: var(--coral);
+    color: var(--white);
+
+    border: none;
+    border-radius: 5px;
+    width: 80%;
+    max-width: 400px;
+
+    font-size: 1rem;
+    padding: 1rem;
+    cursor: pointer;
+
+    transition: background-color 0.5s;
+}
+.connectButton:hover {
+    background-color: var(--dark-coral);
+}
+
+
+
+@media (min-width: 570px) {
+
+    .logo {
+        margin-bottom: 4.5rem;
+    }
+    .logo svg {
+        font-size: 150px;
+        margin-bottom: 1.5rem;
+    }
+    .logo h2 {
+        font-size: 3.5rem;
+    }
+}

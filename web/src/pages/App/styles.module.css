@@ -1,0 +1,143 @@
+.pageWrapper {
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: 'Roboto', sans-serif;
+}
+
+.chatContainer {
+    height: 100%;
+
+    width: 100%;
+    background-image: linear-gradient(to bottom, var(--coral), var(--yellow));
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+/*****/
+.chatContainer .messages {
+    height: 100%;
+    width: 100%;
+    padding: 5% 5% 1.5rem 5%;
+
+    overflow-y: auto;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.messages .myMessage,
+.messages .othersMessage {
+    margin-bottom: 0.5rem;
+    padding: 0.6rem;
+    background-color: var(--white);
+    width: fit-content;
+    max-width: 90%;
+    word-break: break-all;
+    white-space: normal;
+}
+.messages .myMessage {
+    align-self: flex-end;
+    border-radius: 10px 0 10px 10px;
+    box-shadow: 2px 2px 3px 0.5px rgba(0, 0, 0, 0.15);
+}
+.messages .othersMessage {
+    align-self: flex-start;
+    border-radius: 0px 10px 10px 10px;
+    box-shadow: -2px 2px 3px 0.5px rgba(0, 0, 0, 0.15);
+}
+
+
+.messages .author {
+    color: var(--gray);
+    font-size: 1rem;
+    margin-right: 0.8rem;
+}
+.messages .message {
+    color: #222;
+    font-size: 1.3rem;
+}
+
+
+
+
+/*****/
+.chatContainer .sendWrapper {
+    width: 100%;
+    height: 6rem;
+
+    background-color: transparent;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sendWrapper .inputWrapper {
+    width: 95%;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0 1rem;
+    background-color: white;
+
+    border: 1px solid #ccc;
+}
+.sendWrapper .inputWrapper input {
+    width: calc(100% - 2.3rem);
+    height: 100%;
+
+    padding: 1rem 1rem;
+    
+    border: none;
+    outline: none;
+    font-size: 1rem;
+
+    color: #222;
+
+    text-overflow: ellipsis;
+}
+
+.inputWrapper .sendButton {
+    border-radius: 50%;
+    border: none;
+    background-color: var(--coral);
+    
+    height: 2rem;
+    width: 2rem;
+
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: background-color 0.3s;
+}
+.inputWrapper .sendButton:hover {
+    background-color: var(--light-coral);
+}
+
+.inputWrapper .sendButton svg {
+    color: white;
+    font-size: 1.3rem;
+    transition: color 0.25s;
+}
+
+
+@media (min-width: 570px) {
+    .messages .myMessage,
+    .messages .othersMessage {
+        padding: 1rem;
+    }
+}
